@@ -1,64 +1,30 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
-    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
-</head>
-<body>
-    <!--Top Banner Div-->
-    <div class="banner-top background-black">
-        <h1 class="font-banner font-light-blue">Professional and Accurate Conversions</h1>
-    </div>
-    <!--Top Banner Div-->
-   
-    <!--Converter Div-->
-    <div id="app" class="converter container background-grey">
-        <!--Row Div-->
-        <div class="row">
-
+﻿<!--Converter Div-->
+<div id="app" class="converter container background-grey">
+    <!--Row Div-->
+    <div class="row">
+        <!--Form Div-->
+        <form action="(insertActionHere)" method="post">
             <!--1st Column Div-->
             <div class="col-md-5 input-column" align="center">
                 <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-                <input class="input-box" v-model="rightInput" v:on:input"rightToLeft" />
+                <input name="RightInput" type="number" step="any" />
             </div>
             <!--1st Column Div-->
             <!--Seperation Div-->
-            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <label for="Convert Data">Convert Data</label>
+                <input name="submit" type="submit" />
+            </div>
             <!--Seperation Div-->
             <!--2nd Column Div-->
             <div class="col-md-5 input-column" align="center">
                 <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-                <input class="input-box" v-model="leftInput" v:on:input"leftToRight" />
+                <input name="LeftInput" type="number" step="any" />
             </div>
             <!--2nd Column Div-->
-        </div>
-        <!--Row Div-->
+        </form>
+        <!--Form Div-->
     </div>
-    <!--Converter Div-->
-    <!--Bottom Banner Div-->
-    <div class="banner-bottom background-black">
-
-    </div>
-    <!--Bottom Banner Div-->
-</body>
-</html>
-<script src="https://unpkg.com/vue">
-    var app = new Vue({
-        el: '#app',
-        data: {
-            rightInput: '',
-            leftInput: ''
-        },
-        methods: {
-            rightToLeft: function() {
-
-            },
-            leftToRight: function() {
-
-            }
-        }
-    })
-</script>
+    <!--Row Div-->
+</div>
+<!--Converter Div-->
