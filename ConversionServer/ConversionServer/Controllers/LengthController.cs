@@ -20,5 +20,24 @@ namespace ConversionServer.Controllers
         {
             
         }
-    }
+        DigitalModel model = new DigitalModel();
+
+        public ActionResult LengthConversion()
+        {
+            model.MegabyteInput = 0;
+            model.MegabyteOutput = 0;
+            model.GigabyteInput = 0;
+            model.GigabyteOutput = 0;
+            return View(viewName: "DigitalConversion", model: model);
+        }
+
+        [HttpPost]
+        public ActionResult Conversion(double inFeet, double inYards)
+        {
+            model.MegabyteInput = MegaBytes;
+            model.GigabyteOutput = MegaBytes / 1024;
+            model.GigabyteInput = GigaBytes;
+            model.MegabyteOutput = GigaBytes * 1024;
+            return View(viewName: "DigitalConversion", model: model);
+        }
 }
