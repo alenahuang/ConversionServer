@@ -1,27 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace ConversionServer.Controllers
-{
-    public class VolumeController : Controller
-    {
-        
-        [HttpPost]
-        public ActionResult ConvertToPints(double inputNumber)
-        {
-            return View(viewName: "VolumeConversion", model: (inputNumber/8.0));
-        }
-
-        [HttpPost]
-        public ActionResult ConvertToGallons(double inputNumber2)
-        {
-            return View(viewName: "VolumeConversion", model: (inputNumber2 * 8.0));
-        }
-
-    }
-}
+﻿using System; using System.Collections.Generic; using System.Linq; using System.Threading.Tasks; using Microsoft.AspNetCore.Mvc; using ConversionServer.Models;  namespace ConversionServer.Controllers {     public class VolumeController : Controller     {         VolumeModel model = new VolumeModel();          public ActionResult VolumeConversion()         {             model.PintInput = 0;             model.PintOutput = 0;             model.GallonInput = 0;             model.GallonOutput = 0;             return View(viewName: "VolumeConversion", model: model);         }          [HttpPost]         public ActionResult ConvertData(double Pints, double Gallons)         {             model.PintInput = Pints;             model.GallonOutput = Pints / 8;             model.GallonInput = Gallons;             model.PintOutput = Gallons * 8;             return View(viewName: "VolumeConversion", model: model);         }     } }

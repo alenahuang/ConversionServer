@@ -12,6 +12,6 @@
     <Content Remove="Views\VolumeConversion.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\VolumeConversion\" />
+    <Folder Include="Views\Volume\" />
   </ItemGroup>
 </Project>
