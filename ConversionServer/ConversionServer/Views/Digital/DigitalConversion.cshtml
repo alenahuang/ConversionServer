@@ -1,4 +1,4 @@
-﻿
+﻿@model ConversionServer.Models.DigitalModel
 @{
     ViewData["Title"] = "DigitalConversion";
 }
@@ -9,24 +9,28 @@
 <div id="app" class="converter container background-grey">
     <!--Row Div-->
     <div class="row">
-
-        <!--1st Column Div-->
-        <div class="col-md-5 input-column" align="center">
-            <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-            <input class="input-box" v-model="rightInput" v:on:input"rightToLeft" />
-        </div>
-        <!--1st Column Div-->
-
-        <!--Seperation Div-->
-        <div class="col-md-2"></div>
-        <!--Seperation Div-->
-
-        <!--2nd Column Div-->
-        <div class="col-md-5 input-column" align="center">
-            <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-            <input class="input-box" v-model="leftInput" v:on:input"leftToRight" />
-        </div>
-        <!--2nd Column Div-->
+        <!--Form Div-->
+        <form action="(insertActionHere)" method="post">
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="MegaBytes">MegaBytes</label><input name="MegaBytes" type="number" step="any" required />
+                <label for="GigaBytes">GigaBytes</label><input name="GigaBytes" type="number" step="any" required />
+            </div>
+            <!--1st Column Div-->
+            <!--Seperation Div-->
+            <div class="col-md-2">
+                <label for="Convert Data">Convert Data</label>
+                <input name="submit" type="submit" />
+            </div>
+            <!--Seperation Div-->
+            <!--2nd Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="MegaBytes">GigaBytes</label><input name="MegaBytes" type="number" step="any" disabled value="@Model.GigaByteOutput"/>
+                <label for="GigaBytes">MegaBytes</label><input name="GigaBytes" type="number" step="any" disabled value="@Model.MegabyteOutput"/>
+            </div>
+            <!--2nd Column Div-->
+        </form>
+        <!--Form Div-->
     </div>
     <!--Row Div-->
 </div>
