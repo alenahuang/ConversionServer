@@ -1,0 +1,16 @@
+﻿@model double
+
+@{
+    ViewBag.Title="TemperatureConversion";
+}
+
+<div>
+    <form aciton="ConvertToF" method="post">
+        <p>Enter degrees in Celsius: <input name="degreesC" type="number" step="any" /></p>
+        <input name="submit" type="submit" />
+    </form>
+
+    <p>
+        Degrees Fahrenheit: @Model
+    </p>
+</div>
