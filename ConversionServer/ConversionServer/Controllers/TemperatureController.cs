@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ConversionServer.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,14 +11,23 @@ namespace ConversionServer.Controllers
 {
     public class TemperatureController : Controller
     {
-        public ActionResult ConvertToF()
+        TemperatureModel model = new TemperatureModel();
+        public ActionResult ConvertDegrees()
         {
-            return View(viewName:"TemperatureConversion", model: 0.0);
+            model.CelsiusInput = 0;
+            model.FahrenheitInput = 0;
+            model.CelsiusOutput = 0;
+            model.FahrenheitOutput = 0;
+            return View(viewName:"TemperatureConversion", model: model);
         }
 
-        public ActionResult ConvertToF(double degreesC)
+        public ActionResult ConvertTemperature(double degreesC, double degreesF)
         {
-            return View(viewName: "TemperatureConversion", model: (degreesC * 9 / 5 + 32));
+            model.CelsiusInput = degreesC;
+            model.FahrenheitInput = degreesF;
+            model.CelsiusOutput = degreesF * 9 / 5 + 32;
+            model.FahrenheitOutput = (degreesC - 32) * 5 / 9;
+            return View(viewName: "TemperatureConversion", model: model);
         }
     }
 }
