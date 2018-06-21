@@ -18,7 +18,7 @@ namespace ConversionServer.Controllers
         [HttpPost]
         public ActionResult Conversion(double inFeet, double inYards)
         {
-
+            
         }
     }
 }

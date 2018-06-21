@@ -7,7 +7,8 @@ namespace ConversionServer.Views.Length
 {
     public class LengthModel
     {
-        private double feet, yards;
+        private double Feet;
+        private double Yards;
 
     }
 }
