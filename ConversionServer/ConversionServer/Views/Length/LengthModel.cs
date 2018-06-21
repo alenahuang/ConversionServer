@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace ConversionServer.Views.Length
 {
-    public class Class
+    public class LengthModel
     {
+        private double feet, yards;
+
     }
 }

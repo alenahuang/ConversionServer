@@ -11,9 +11,14 @@ namespace ConversionServer.Controllers
     public class TestController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public ActionResult LengthConversion()
         {
-            return View();
+            return View(viewName: "LengthConversion");
+        }
+        [HttpPost]
+        public ActionResult Conversion(ConversionServer.Views.Length.LengthModel lengthInStuff)
+        {
+
         }
     }
 }
