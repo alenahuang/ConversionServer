@@ -16,7 +16,7 @@ namespace ConversionServer.Controllers
             return View(viewName: "LengthConversion");
         }
         [HttpPost]
-        public ActionResult Conversion(ConversionServer.Views.Length.LengthModel lengthInStuff)
+        public ActionResult Conversion(double inFeet, double inYards)
         {
 
         }
