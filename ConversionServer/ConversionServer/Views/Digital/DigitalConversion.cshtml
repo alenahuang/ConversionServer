@@ -10,11 +10,11 @@
     <!--Row Div-->
     <div class="row">
         <!--Form Div-->
-        <form action="(insertActionHere)" method="post">
+        <form action="ConvertData" method="post">
             <!--1st Column Div-->
             <div class="col-md-5 input-column" align="center">
-                <label for="MegaBytes">MegaBytes</label><input name="MegaBytes" type="number" step="any" required />
-                <label for="GigaBytes">GigaBytes</label><input name="GigaBytes" type="number" step="any" required />
+                <label for="MegaBytes">MegaBytes</label><input name="MegaBytes" type="number" step="any" required /> <br />
+                <label for="GigaBytes">GigaBytes</label><input name="GigaBytes" type="number" step="any" required /> <br />
             </div>
             <!--1st Column Div-->
             <!--Seperation Div-->
@@ -25,8 +25,10 @@
             <!--Seperation Div-->
             <!--2nd Column Div-->
             <div class="col-md-5 input-column" align="center">
-                <label for="MegaBytes">GigaBytes</label><input name="MegaBytes" type="number" step="any" disabled value="@Model.GigaByteOutput"/>
-                <label for="GigaBytes">MegaBytes</label><input name="GigaBytes" type="number" step="any" disabled value="@Model.MegabyteOutput"/>
+                <label for="MegaBytes">@Model.MegabyteInput Megabytes = </label><input type="number" step="any" disabled value="@Model.GigabyteOutput"/> <label for="Gigabytes">Gigabytes</label>
+                <br />
+                <label for="GigaBytes">@Model.GigabyteInput Gigabytes = </label><input type="number" step="any" disabled value="@Model.MegabyteOutput"/> <label for="Megabytes">Megabytes</label>
+                <br />
             </div>
             <!--2nd Column Div-->
         </form>

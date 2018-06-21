@@ -7,7 +7,10 @@ namespace ConversionServer.Models
 {
     public class DigitalModel
     {
-        public double MegaBytes { get; set; }
-        public double Gigabytes { get; set; 
+        public double MegabyteInput { get; set; }
+        public double MegabyteOutput { get; set; }
+
+        public double GigabyteInput { get; set; }
+        public double GigabyteOutput { get; set; }
     }
 }
