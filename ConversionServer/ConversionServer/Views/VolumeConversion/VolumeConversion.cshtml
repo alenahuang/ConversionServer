@@ -1,0 +1,21 @@
+﻿@model double
+
+<div>
+    <form action="ConvertToPints" method="post">
+        <input name="inputNumber" />
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        Gallons to pints: @Model
+    </p>
+</div>
+
+<div>
+    <form action="ConvertToGallons" method="post">
+        <input name="inputNumber2" />
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        Pints to Gallons: @Model
+    </p>
+</div>
