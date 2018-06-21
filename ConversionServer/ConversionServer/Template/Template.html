@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
+    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
+</head>
+<body>
+    <!--Top Banner Div-->
+    <div class="banner-top background-black">
+        <h1 class="font-banner font-light-blue">Professional and Accurate Conversions</h1>
+    </div>
+    <!--Top Banner Div-->
+    <!--Navigation Div-->
+    <div class="navigation background-light-blue">
+        <h2 class="navigation-bar">PLACEHOLDER FOR NAVIGATION BAR</h2>
+    </div>
+    <!--Navigation Div-->
+    <!--Converter Div-->
+    <div id="app" class="converter container background-grey">
+        <!--Row Div-->
+        <div class="row">
+
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+                <input class="input-box" v-model="rightInput" v:on:input"rightToLeft" />
+            </div>
+            <!--1st Column Div-->
+            <!--Seperation Div-->
+            <div class="col-md-2"></div>
+            <!--Seperation Div-->
+            <!--2nd Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+                <input class="input-box" v-model="leftInput" v:on:input"leftToRight" />
+            </div>
+            <!--2nd Column Div-->
+        </div>
+        <!--Row Div-->
+    </div>
+    <!--Converter Div-->
+    <!--Bottom Banner Div-->
+    <div class="banner-bottom background-black">
+
+    </div>
+    <!--Bottom Banner Div-->
+</body>
+</html>
+<script src="https://unpkg.com/vue">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            rightInput: '',
+            leftInput: ''
+        },
+        methods: {
+            rightToLeft: function() {
+
+            },
+            leftToRight: function() {
+
+            }
+        }
+    })
+</script>
