@@ -5,3 +5,27 @@
 
 <h2>DigitalConversion</h2>
 
+<!--Converter Div-->
+<div id="app" class="converter container background-grey">
+    <!--Row Div-->
+    <div class="row">
+
+        <!--1st Column Div-->
+        <div class="col-md-5 input-column" align="center">
+            <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+            <input class="input-box" v-model="rightInput" v:on:input"rightToLeft" />
+        </div>
+        <!--1st Column Div-->
+        <!--Seperation Div-->
+        <div class="col-md-2"></div>
+        <!--Seperation Div-->
+        <!--2nd Column Div-->
+        <div class="col-md-5 input-column" align="center">
+            <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+            <input class="input-box" v-model="leftInput" v:on:input"leftToRight" />
+        </div>
+        <!--2nd Column Div-->
+    </div>
+    <!--Row Div-->
+</div>
+<!--Converter Div-->
