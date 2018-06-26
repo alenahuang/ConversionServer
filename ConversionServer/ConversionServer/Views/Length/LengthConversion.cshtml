@@ -21,9 +21,10 @@
             <!--Seperation Div-->
             <!--2nd Column Div-->
             <div class="col-md-5 input-column" align="center">
-                <label for="Yards">Yards</label><input type="number" step="any" disabled value="@Model.Yards" />
-                <label for="Feet">Feet</label><input type="number" step="any" disabled value="@Model.Feet"/>
-            </div>
+                <label for="Yards">@Model.getInFeet() Feet = </label><input type="number" step="any" disabled value="@Model.getOutYards()" />
+                <br />
+                <label for="Feet">@Model.getInYards() Yards = </label><input type="number" step="any" disabled value="@Model.getOutFeet()" />       
+                <br />
             <!--2nd Column Div-->
         </form>
         <!--Form Div-->
