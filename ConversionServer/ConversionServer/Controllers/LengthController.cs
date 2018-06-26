@@ -11,33 +11,13 @@ namespace ConversionServer.Controllers
     public class TestController : Controller
     {
         // GET: /<controller>/
-        public ActionResult LengthConversion()
-        {
-            return View(viewName: "LengthConversion");
-        }
+        ConversionServer.Views.Length.LengthModel model = new ConversionServer.Views.Length.LengthModel();
+        public ActionResult LengthConversion() => View(viewName: "DigitalConversion", model: model);
         [HttpPost]
         public ActionResult Conversion(double inFeet, double inYards)
         {
-            
-        }
-        DigitalModel model = new DigitalModel();
-
-        public ActionResult LengthConversion()
-        {
-            model.MegabyteInput = 0;
-            model.MegabyteOutput = 0;
-            model.GigabyteInput = 0;
-            model.GigabyteOutput = 0;
+            model.setAll(inFeet, inYards * 3, inYards, inYards / 3);
             return View(viewName: "DigitalConversion", model: model);
         }
-
-        [HttpPost]
-        public ActionResult Conversion(double inFeet, double inYards)
-        {
-            model.MegabyteInput = MegaBytes;
-            model.GigabyteOutput = MegaBytes / 1024;
-            model.GigabyteInput = GigaBytes;
-            model.MegabyteOutput = GigaBytes * 1024;
-            return View(viewName: "DigitalConversion", model: model);
-        }
+    }
 }
