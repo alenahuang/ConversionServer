@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConversionServer.Views.Length
+namespace ConversionServer.Models
 {
     public class LengthModel
     {
@@ -15,10 +15,22 @@ namespace ConversionServer.Views.Length
             inYards = 0.0;
             outYards = 0.0;
         }
-        public double getInFeet() => inFeet;       
-        public double getOutFeet() => outFeet;
-        public double getInYards() => inYards;
-        public double getOutYards() => outYards;
+        public double getInFeet()
+        {
+            return inFeet;
+        }
+        public double getOutFeet()
+        {
+            return outFeet;
+        }
+        public double getInYards()
+        {
+            return inYards;
+        }
+        public double getOutYards()
+        {
+            return outYards;
+        }
         public void setAll(double inFeet, double outFeet, double inYards, double outYards)
         {
             this.inFeet = inFeet;
