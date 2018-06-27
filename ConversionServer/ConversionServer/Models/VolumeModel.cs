@@ -1,0 +1,1 @@
+﻿using System; using System.Collections.Generic; using System.Linq; using System.Threading.Tasks;  namespace ConversionServer.Models {     public class VolumeModel     {         public double PintInput { get; set; }         public double PintOutput { get; set; }          public double GallonInput { get; set; }         public double GallonOutput { get; set; }     } }
