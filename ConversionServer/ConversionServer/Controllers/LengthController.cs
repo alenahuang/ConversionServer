@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConversionServer.Controllers
 {
-    public class TestController : Controller
+    public class LengthController : Controller
     {
         // GET: /<controller>/
         ConversionServer.Models.LengthModel model = new ConversionServer.Models.LengthModel();
