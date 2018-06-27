@@ -12,7 +12,7 @@ namespace ConversionServer.Controllers
     {
         // GET: /<controller>/
         ConversionServer.Models.LengthModel model = new ConversionServer.Models.LengthModel();
-        public ActionResult Conversion()
+        public ActionResult LengthConversion()
         {
             return View(viewName: "LengthConversion", model: model);
         }
