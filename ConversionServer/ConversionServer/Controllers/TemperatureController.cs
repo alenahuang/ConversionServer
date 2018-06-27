@@ -12,6 +12,7 @@ namespace ConversionServer.Controllers
     public class TemperatureController : Controller
     {
         TemperatureModel model = new TemperatureModel();
+
         public ActionResult ConvertDegrees()
         {
             model.CelsiusInput = 0;
@@ -21,6 +22,7 @@ namespace ConversionServer.Controllers
             return View(viewName:"TemperatureConversion", model: model);
         }
 
+        [HttpPost]
         public ActionResult ConvertTemperature(double degreesC, double degreesF)
         {
             model.CelsiusInput = degreesC;
