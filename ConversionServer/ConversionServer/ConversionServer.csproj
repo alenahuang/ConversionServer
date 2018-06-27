@@ -15,4 +15,7 @@
   <ItemGroup>
     <Folder Include="Views\Volume\" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Cooking\" />
+  </ItemGroup>
 </Project>
