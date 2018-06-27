@@ -27,8 +27,8 @@ namespace ConversionServer.Controllers
         {
             model.CelsiusInput = degreesC;
             model.FahrenheitInput = degreesF;
-            model.CelsiusOutput = degreesF * 9 / 5 + 32;
-            model.FahrenheitOutput = (degreesC - 32) * 5 / 9;
+            model.CelsiusOutput =  (degreesF - 32) * 5 / 9;
+            model.FahrenheitOutput = degreesC * 9 / 5 + 32;
             return View(viewName: "TemperatureConversion", model: model);
         }
     }
