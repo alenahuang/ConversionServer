@@ -1,0 +1,40 @@
+﻿@model ConversionServer.Models.TemperatureModel
+
+@{
+    ViewData["Title"] = "TemperatureConversion";
+}
+
+<h2>Temperature Conversion</h2>
+
+<!--Converter Div-->
+<div id="app" class="converter container background-grey">
+    <!--Row Div-->
+    <div class="row">
+        <!--Form Div-->
+        <form action="ConvertTemperature" method="post">
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="degreesC">Degrees Celsius</label><input name="degreesC" type="number" step="any" />
+                <label for="degreesF)">Degrees Fahrenheit</label><input name="degreesF" type="number" step="any" />
+            </div>
+            <!--1st Column Div-->
+            <!--Seperation Div-->
+            <div class="col-md-2">
+                <label for="Convert Temperature">Convert Temperature</label>
+                <input name="submit" type="submit" />
+            </div>
+            <!--Seperation Div-->
+            <!--2nd Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="degreesC">@Model.CelsiusInput Celsius = </label><input type="number" step="any" disabled value="@Model.FahrenheitOutput" /> <label for="degreesC">Degrees Fahrenheit</label>
+                <br />
+                <label for="degreesF">@Model.FahrenheitInput Fahrenheit = </label><input type="number" step="any" disabled value="@Model.CelsiusOutput" /> <label for="degreesF">Degrees Celsius</label>
+                <br />
+            </div>
+            <!--2nd Column Div-->
+        </form>
+        <!--Form Div-->
+    </div>
+    <!--Row Div-->
+</div>
+<!--Converter Div-->
