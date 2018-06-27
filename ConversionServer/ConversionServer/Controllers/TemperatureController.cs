@@ -13,7 +13,7 @@ namespace ConversionServer.Controllers
     {
         TemperatureModel model = new TemperatureModel();
 
-        public ActionResult ConvertDegrees()
+        public ActionResult TemperatureConversion()
         {
             model.CelsiusInput = 0;
             model.FahrenheitInput = 0;
