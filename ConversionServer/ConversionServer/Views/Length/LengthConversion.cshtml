@@ -1,0 +1,38 @@
+﻿@model ConversionServer.Models.LengthModel
+@{
+    ViewData["Title"] = "LengthConversion";
+}
+
+<h2>LengthConversion</h2>
+
+<!--Converter Div-->
+<div id="app" class="converter container background-grey">
+    <!--Row Div-->
+    <div class="row">
+        <!--Form Div-->
+        <form action="Conversion" method="post">
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="Feet">Feet</label><input name="inFeet" type="number" step="any" /> <br />
+                <label for="Yards">Yards</label><input name="inYards" type="number" step="any" /> <br />
+            </div>
+            <!--1st Column Div-->
+            <!--Seperation Div-->
+            <div class="col-md-2">
+                <label for="Convert Data">Convert Data</label>
+                <input name="submit" type="submit" />
+            </div>
+            <!--Seperation Div-->
+            <!--2nd Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="Yards">@Model.getInFeet() Feet = </label><input type="number" step="any" disabled value="@Model.getOutYards()" />
+                <br />
+                <label for="Feet">@Model.getInYards() Yards = </label><input type="number" step="any" disabled value="@Model.getOutFeet()" />       
+                <br />
+            <!--2nd Column Div-->
+        </form>
+        <!--Form Div-->
+    </div>
+    <!--Row Div-->
+</div>
+<!--Converter Div-->

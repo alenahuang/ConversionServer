@@ -1,0 +1,40 @@
+﻿@model ConversionServer.Models.CookingModel
+@{
+    ViewData["Title"] = "CookingConversion";
+}
+
+<h2>CookingConversion</h2>
+<!--Converter Div-->
+<div id="app" class="converter container background-grey">
+    <!--Row Div-->
+    <div class="row">
+        <!--Form Div-->
+        <form action="ConvertData" method="post">
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="Teaspoons">Teaspoons</label><input name="Teaspoons" type="number" step="any" required /> <br />
+                <label for="Tablespoons">Tablespoons</label><input name="Tablespoons" type="number" step="any" required /> <br />
+            </div>
+            <!--1st Column Div-->
+            <!--Seperation Div-->
+            <div class="col-md-2">
+                <label for="Convert Data">Convert Data</label>
+                <input name="submit" type="submit" />
+            </div>
+            <!--Seperation Div-->
+            <!--2nd Column Div-->
+            <div class="col-md-5 input-column" align="center">
+                <label for="Teaspoons">@Model.TeaspoonInput Teaspoons = </label><input 
+                        type="number" step="any" disabled value="@Model.TablespoonOutput" /> <label for="Tablespoons">Tablespoons</label>
+                <br />
+                <label for="Tablespoons">@Model.TablespoonInput Tablespoons = </label><input 
+                        type="number" step="any" disabled value="@Model.TeaspoonOutput" /> <label for="Teaspoons">Teaspoons</label>
+                <br />
+            </div>
+            <!--2nd Column Div-->
+        </form>
+        <!--Form Div-->
+    </div>
+    <!--Row Div-->
+</div>
+<!--Converter Div-->
